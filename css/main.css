@@ -242,13 +242,17 @@ body {
   /* トップページのメニューリストには別途paddingの設定（マルチクラス） */
   padding-bottom: 50px;
 }
-
-.menu_item {
-  width: 49%;
+ /* menu_itemからwidthの設定をなくし、デフォルトではwidthが100%になるようにする */
+ .menu_item {
   display: flex;
   flex-direction: row-reverse;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
   margin-bottom: 20px;
+}
+/* recommended menuで使用されるときはwidthが49%になるようにする */
+/* 汎用性のある名前にするため、menu_item_harfなどの名前にしても良い */
+.menu_item_recommended {
+  width: 49%;
 }
 .menu_item_content {
   width: 45%;
